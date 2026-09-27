@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  node_bundler = "esbuild"
+  # pdf.js loads its worker at runtime; ship it as a normal module instead of bundling.
+  external_node_modules = ["pdfjs-dist"]
+  included_files = ["node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs"]
+
+# The dashboard is a single-page app. (/api/* is handled by the api function first.)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

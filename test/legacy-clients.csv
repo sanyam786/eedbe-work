@@ -1,0 +1,7 @@
+phone,contact_name,entity_name,pan,entity_type,dob,gstin,trade_name,requires_approval
+9812345678,Ramesh Sharma,Ramesh Sharma,ABCPS1234K,individual,15-08-1975,,,
+9812345678,Ramesh Sharma,Sharma Traders,AAHFS5678L,firm,01-04-2010,08AAHFS5678L1Z3,Sharma Traders,
+9812345678,Ramesh Sharma,Sharma Traders,AAHFS5678L,firm,01-04-2010,24AAHFS5678L1Z9,Sharma Traders Gujarat,
+9811100022,Vikas (Sharma Traders accountant),Sharma Traders,AAHFS5678L,firm,01-04-2010,,,
+9900011122,Priya Mehta,Mehta Enterprises Pvt Ltd,AABCM4321Q,company,20-06-2015,08AABCM4321Q1ZP,Mehta Enterprises,
+9900011122,Priya Mehta,Mehta Family HUF,AAGHM1122H,huf,10-01-2001,,,yes

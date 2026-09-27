@@ -1,0 +1,48 @@
+{
+  "name": "eedbe-work",
+  "version": "1.0.0",
+  "description": "eedbe Work: business automation platform (WhatsApp Document Assistant)",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"tsx watch scripts/dev-server.ts\" \"vite\"",
+    "dev:api": "tsx watch scripts/dev-server.ts",
+    "dev:web": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit -p . && tsc --noEmit -p web",
+    "test": "tsx --test --test-concurrency=1 test/*.test.ts",
+    "seed:demo": "tsx scripts/seed-demo.ts",
+    "start": "tsx scripts/dev-server.ts"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "@cantoo/pdf-lib": "^2.11.1",
+    "@hono/node-server": "^2.1.1",
+    "@netlify/blobs": "^11.1.1",
+    "bcryptjs": "^3.0.3",
+    "googleapis": "^182.0.0",
+    "hono": "^4.13.9",
+    "jose": "^6.2.12",
+    "pdfjs-dist": "^6.3.289",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^6.0.0",
+    "@types/node": "^26.6.3",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4",
+    "tsx": "^4.23.15",
+    "typescript": "5.9",
+    "vite": "^8.3.1"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  }
+}
